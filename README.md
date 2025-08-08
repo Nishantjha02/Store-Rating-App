@@ -1,187 +1,310 @@
 # Store Rating System
 
-A full-stack MERN-style application (React + Node.js + MySQL) that allows:
-- **Admins** to manage users and stores
-- **Store owners** to view ratings and reviews for their store
-- **Normal users** to rate and review stores
+A full-stack web application for managing stores and customer ratings with role-based access control. Built with React, Node.js/Express, and MySQL.
 
-This project was built as part of the **Roxiler Systems Coding Challenge**.
+![Store Rating System](https://img.shields.io/badge/Status-Active-green)
+![Node.js](https://img.shields.io/badge/Node.js-16%2B-green)
+![React](https://img.shields.io/badge/React-18-blue)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
 
----
+## 🌟 Features
 
-## 📌 Features
+### Authentication System
+- ✅ User registration with comprehensive validation
+- ✅ JWT-based secure login system
+- ✅ Role-based access control (Admin, User, Store Owner)
+- ✅ Password update functionality
 
-### Admin Panel
-- View dashboard with total users, total stores, and total ratings
-- Create new users and store owners
-- View and manage all stores and users
-
-### Store Owner Dashboard
-- View store details (name, email, address, join date)
-- See average store rating and all customer reviews
-- View rating distribution (1–5 stars)
+### Admin Features
+- 📊 Dashboard with comprehensive statistics
+- 👥 User management (view, create, filter, sort)
+- 🏪 Store management (view, create, filter, sort)
+- ➕ Add new users with different roles
+- 🆕 Create stores with owner accounts
 
 ### User Features
-- Browse and rate stores
-- Leave written reviews
+- 🔍 View and search all stores with ratings
+- ⭐ Submit ratings (1-5 stars) with reviews
+- ✏️ Update existing ratings
+- 📝 View personal rating history
 
----
+### Store Owner Features
+- 📈 Store dashboard with average rating
+- 👀 View all customer ratings and reviews
+- 📊 See rating distribution
+- 👤 View customer details
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-**Frontend:**
-- React.js
-- Axios for API calls
-- Context API for authentication state
-- CSS for styling
+- **Frontend**: React 18, CSS3, Axios
+- **Backend**: Node.js, Express.js
+- **Database**: MySQL 8.0+
+- **Authentication**: JWT (JSON Web Tokens)
+- **Password Security**: bcryptjs
+- **Validation**: express-validator
 
-**Backend:**
-- Node.js + Express.js
-- MySQL database
-- JWT Authentication
-- bcrypt for password hashing
+## 📋 Prerequisites
 
----
+Before you begin, ensure you have the following installed:
 
-## 📂 Project Structure
+- **Node.js** (v16 or higher) - [Download here](https://nodejs.org/)
+- **MySQL Server** (v8.0 or higher) - [Download here](https://dev.mysql.com/downloads/mysql/)
+- **Git** - [Download here](https://git-scm.com/)
+- **Text Editor** (VS Code recommended) - [Download here](https://code.visualstudio.com/)
 
-store-rating-system/
-│
-├── backend/ # Express API server
-│ ├── routes/ # API routes
-│ ├── controllers/ # Request handlers
-│ ├── models/ # DB models & queries
-│ ├── config/ # DB connection
-│ ├── middleware/ # Auth middleware
-│ ├── .env.example # Sample environment variables
-│ └── server.js
-│
-├── frontend/ # React application
-│ ├── src/
-│ └── public/
-│
-├── db/ # Database dump & SQL setup
-│ └── database.sql
-│
-├── .gitignore
-├── README.md
+## 🚀 Installation & Setup
 
-yaml
-Copy code
+### Step 1: Clone the Repository
 
----
-
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/store-rating-system.git
+git clone <your-repository-url>
 cd store-rating-system
-2️⃣ Backend Setup
-Go into the backend folder:
+```
 
-bash
-Copy code
+### Step 2: Database Setup
+
+Open MySQL command line or MySQL Workbench and execute:
+
+```sql
+CREATE DATABASE store_rating_system;
+USE store_rating_system;
+```
+
+### Step 3: Backend Setup
+
+Navigate to the backend directory and install dependencies:
+
+```bash
 cd backend
-Install dependencies:
-
-bash
-Copy code
 npm install
-Create a .env file in the backend folder using .env.example:
+```
 
-bash
-Copy code
-cp .env.example .env
-Important: Update .env values with your local credentials.
+Create environment file:
 
-Example .env:
+```bash
+# Create .env file
+touch .env
+```
 
-ini
-Copy code
-PORT=5000
+Add the following content to `backend/.env`:
+
+```env
 DB_HOST=localhost
-DB_USER=store_user
-DB_PASSWORD=password123
-DB_NAME=store_rating_app
-JWT_SECRET=replace_this_with_a_secure_key
-Import the database:
+DB_USER=root
+DB_PASSWORD=your_mysql_password_here
+DB_NAME=store_rating_system
+JWT_SECRET=your_super_secret_jwt_key_here_12345
+PORT=5000
+```
 
-Open MySQL and create the database:
+**⚠️ Important**: Replace `your_mysql_password_here` with your actual MySQL password.
 
-sql
-Copy code
-CREATE DATABASE store_rating_app;
-Import the provided dump:
+### Step 4: Frontend Setup
 
-bash
-Copy code
-mysql -u root -p store_rating_app < ../db/database.sql
-(Replace root with your MySQL user)
+Navigate to the frontend directory and install dependencies:
 
-Start the backend server:
-
-bash
-Copy code
-npm start
-3️⃣ Frontend Setup
-Go into the frontend folder:
-
-bash
-Copy code
+```bash
 cd ../frontend
-Install dependencies:
-
-bash
-Copy code
 npm install
-Start the frontend development server:
+```
 
-bash
-Copy code
+## 🏃‍♂️ Running the Application
+
+### Start Backend Server
+
+Open a terminal and run:
+
+```bash
+cd backend
+npm run dev
+```
+
+You should see:
+```
+Server running on port 5000
+Database initialized successfully
+```
+
+### Start Frontend Application
+
+Open a new terminal and run:
+
+```bash
+cd frontend
 npm start
-The frontend will run on http://localhost:3000 and will communicate with the backend API on http://localhost:5000.
+```
 
-🗄 Database Notes
-A database.sql file is included in the /db folder with:
+The application will automatically open in your browser at `http://localhost:3000`
 
-Pre-created admin user
+## 🔐 Default Admin Account
 
-Sample store owner
+Use these credentials to access the admin panel:
 
-Example store
+- **Email**: `admin@example.com`
+- **Password**: `Admin123!`
 
-This allows reviewers to run the project immediately without manually creating data.
+## 🧪 Testing the Application
 
-🔐 Default Credentials for Testing
-Admin Login:
+Follow these steps to test all features:
 
-pgsql
-Copy code
-Email: admin@example.com
-Password: Admin@123
-Store Owner Login:
+1. **Admin Login**: Use default admin credentials
+2. **Create Users**: Add new users via Admin Panel
+3. **Create Stores**: Add stores via Admin Panel
+4. **User Registration**: Register as a regular user
+5. **Rate Stores**: Login as user and rate stores
+6. **Store Dashboard**: Login as store owner to view ratings
 
-pgsql
-Copy code
-Email: owner@example.com
-Password: Owner@123
-User Login:
+## 📁 Project Structure
 
-sql
-Copy code
-Email: user@example.com
-Password: User@123
-🚀 Running the Project
-After setting up both backend and frontend:
+```
+store-rating-system/
+├── README.md
+├── backend/
+│   ├── package.json
+│   ├── server.js
+│   ├── .env
+│   ├── config/
+│   │   └── database.js
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Store.js
+│   │   └── Rating.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── admin.js
+│   │   ├── user.js
+│   │   └── store.js
+│   ├── middleware/
+│   │   └── auth.js
+│   └── utils/
+│       └── validation.js
+└── frontend/
+    ├── package.json
+    ├── public/
+    │   └── index.html
+    └── src/
+        ├── App.js
+        ├── index.js
+        ├── components/
+        │   ├── Login.js
+        │   ├── Register.js
+        │   ├── AdminDashboard.js
+        │   ├── UserDashboard.js
+        │   └── StoreDashboard.js
+        ├── contexts/
+        │   └── AuthContext.js
+        ├── services/
+        │   └── api.js
+        └── styles/
+            └── App.css
+```
 
-Start backend:
+## 📡 API Endpoints
 
-bash
-Copy code
-cd backend && npm start
-Start frontend:
+### Authentication
+- `POST /api/auth/register` - User registration
+- `POST /api/auth/login` - User login
 
-bash
-Copy code
-cd frontend && npm start
+### Admin Routes (requires admin role)
+- `GET /api/admin/dashboard` - Get dashboard statistics
+- `GET /api/admin/users` - Get users with filters
+- `POST /api/admin/users` - Create new user
+- `GET /api/admin/stores` - Get stores with filters
+- `POST /api/admin/stores` - Create new store
+
+### User Routes (requires user role)
+- `GET /api/user/stores` - Get stores with user ratings
+- `POST /api/user/rating` - Submit rating
+- `PUT /api/user/rating` - Update rating
+- `PUT /api/user/password` - Update password
+
+### Store Routes (requires store_owner role)
+- `GET /api/store/dashboard` - Get store dashboard
+- `GET /api/store/ratings` - Get store ratings
+- `PUT /api/store/password` - Update password
+
+## ✅ Form Validations
+
+- **Name**: 20-60 characters
+- **Address**: Maximum 400 characters
+- **Password**: 8-16 characters, 1 uppercase letter, 1 special character
+- **Email**: Standard email validation
+- **Rating**: Integer between 1-5
+
+## 🎯 User Roles
+
+1. **Admin**: Full system access, manage users and stores
+2. **User**: Can view and rate stores
+3. **Store Owner**: Can view their store's ratings and customer feedback
+
+## 🛠️ Troubleshooting
+
+### Common Issues & Solutions
+
+**Database Connection Error**
+```bash
+# Verify MySQL is running
+sudo service mysql start  # Linux
+brew services start mysql  # macOS
+
+# Check database credentials in .env file
+# Ensure database 'store_rating_system' exists
+```
+
+**Port Already in Use**
+```bash
+# Kill process using port 5000
+lsof -ti:5000 | xargs kill -9
+
+# Or change PORT in .env file
+PORT=3001
+```
+
+**Dependencies Error**
+```bash
+# Delete node_modules and reinstall
+rm -rf node_modules package-lock.json
+npm install
+```
+
+**CORS Errors**
+- Ensure `"proxy": "http://localhost:5000"` is in `frontend/package.json`
+- Check `API_BASE_URL` in `frontend/src/services/api.js`
+
+## 🌐 Access URLs
+
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:5000
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+1. Check the [Troubleshooting](#-troubleshooting) section
+2. Create an issue in the GitHub repository
+3. Provide detailed error messages and steps to reproduce
+
+## 🎉 Acknowledgments
+
+- Built with modern web technologies
+- Responsive design for all devices
+- Comprehensive error handling and validation
+- Real-time search and filtering capabilities
+
+---
+
+**Happy Coding!** 🚀
+
+*Made with ❤️ for the developer community*
