@@ -223,13 +223,7 @@ store-rating-system/
 - `GET /api/store/ratings` - Get store ratings
 - `PUT /api/store/password` - Update password
 
-## ✅ Form Validations
 
-- **Name**: 20-60 characters
-- **Address**: Maximum 400 characters
-- **Password**: 8-16 characters, 1 uppercase letter, 1 special character
-- **Email**: Standard email validation
-- **Rating**: Integer between 1-5
 
 ## 🎯 User Roles
 
@@ -237,64 +231,19 @@ store-rating-system/
 2. **User**: Can view and rate stores
 3. **Store Owner**: Can view their store's ratings and customer feedback
 
-## 🛠️ Troubleshooting
 
-### Common Issues & Solutions
 
-**Database Connection Error**
-```bash
-# Verify MySQL is running
-sudo service mysql start  # Linux
-brew services start mysql  # macOS
-
-# Check database credentials in .env file
-# Ensure database 'store_rating_system' exists
-```
-
-**Port Already in Use**
-```bash
-# Kill process using port 5000
-lsof -ti:5000 | xargs kill -9
-
-# Or change PORT in .env file
-PORT=3001
-```
-
-**Dependencies Error**
-```bash
-# Delete node_modules and reinstall
-rm -rf node_modules package-lock.json
-npm install
-```
-
-**CORS Errors**
-- Ensure `"proxy": "http://localhost:5000"` is in `frontend/package.json`
-- Check `API_BASE_URL` in `frontend/src/services/api.js`
 
 ## 🌐 Access URLs
 
 - **Frontend**: http://localhost:3000
 - **Backend API**: http://localhost:5000
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Troubleshooting](#-troubleshooting) section
-2. Create an issue in the GitHub repository
-3. Provide detailed error messages and steps to reproduce
 
 ## 🎉 Acknowledgments
 
@@ -304,7 +253,3 @@ If you encounter any issues or have questions:
 - Real-time search and filtering capabilities
 
 ---
-
-**Happy Coding!** 🚀
-
-*Made with ❤️ for the developer community*
