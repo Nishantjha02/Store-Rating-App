@@ -1,0 +1,26 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env (do not commit your local env files)
+backend/.env
+frontend/.env
+.env
+
+# DB dump (we WILL include database.sql in the repo so reviewers have your data)
+# If you change your mind, remove the next line's '#' to ignore the dump
+# db/database.sql
+
+# Build
+frontend/build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
