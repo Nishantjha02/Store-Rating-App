@@ -3,7 +3,24 @@
 A full-stack web application for managing stores and customer ratings with role-based access control. Built with React, Node.js/Express, and MySQL.
 
 # Screenshots
-Login Page <img width="1157" height="887" alt="Screenshot 2025-08-09 004721" src="https://github.com/user-attachments/assets/14126fb3-e187-4aea-8498-6116d9e8f17a" />
+Login Page  
+<img width="600" height="460" alt="Screenshot 2025-08-09 004721" src="https://github.com/user-attachments/assets/14126fb3-e187-4aea-8498-6116d9e8f17a" />
+
+Admin Dashboard  
+<img width="600" height="338" alt="Screenshot 2025-08-09 004816" src="https://github.com/user-attachments/assets/fbd8e4ed-c41d-4515-bb64-7388d1ed70fd" />
+
+Admin Dashboard  
+<img width="600" height="341" alt="Screenshot 2025-08-09 004849" src="https://github.com/user-attachments/assets/dd8866f1-14c6-4dfb-adb8-4a7f4bced1f1" />
+
+Admin Dashboard  
+<img width="600" height="242" alt="Screenshot 2025-08-09 004909" src="https://github.com/user-attachments/assets/642fc5e3-3d0d-4b41-bcd6-c5378d08b762" />
+
+User DashBoard  
+<img width="600" height="298" alt="Screenshot 2025-08-09 005458" src="https://github.com/user-attachments/assets/b6ab3014-6c27-4034-a702-a0367da2d240" />
+
+Store owner Dashboard  
+<img width="600" height="361" alt="Screenshot 2025-08-09 005654" src="https://github.com/user-attachments/assets/1112cf47-5d20-4dcc-8933-29774006f65d" />
+
 
 ## 🌟 Features
 
