@@ -2,10 +2,6 @@
 
 A full-stack web application for managing stores and customer ratings with role-based access control. Built with React, Node.js/Express, and MySQL.
 
-![Store Rating System](https://img.shields.io/badge/Status-Active-green)
-![Node.js](https://img.shields.io/badge/Node.js-16%2B-green)
-![React](https://img.shields.io/badge/React-18-blue)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
 
 ## 🌟 Features
 
@@ -16,23 +12,23 @@ A full-stack web application for managing stores and customer ratings with role-
 - ✅ Password update functionality
 
 ### Admin Features
-- 📊 Dashboard with comprehensive statistics
-- 👥 User management (view, create, filter, sort)
-- 🏪 Store management (view, create, filter, sort)
-- ➕ Add new users with different roles
-- 🆕 Create stores with owner accounts
+-  Dashboard with comprehensive statistics
+-  User management (view, create, filter, sort)
+-  Store management (view, create, filter, sort)
+-  Add new users with different roles
+-  Create stores with owner accounts
 
 ### User Features
-- 🔍 View and search all stores with ratings
-- ⭐ Submit ratings (1-5 stars) with reviews
-- ✏️ Update existing ratings
-- 📝 View personal rating history
+-  View and search all stores with ratings
+-  Submit ratings (1-5 stars) with reviews
+-  Update existing ratings
+-  View personal rating history
 
 ### Store Owner Features
-- 📈 Store dashboard with average rating
-- 👀 View all customer ratings and reviews
-- 📊 See rating distribution
-- 👤 View customer details
+-  Store dashboard with average rating
+-  View all customer ratings and reviews
+-  See rating distribution
+-  View customer details
 
 ## 🛠️ Tech Stack
 
