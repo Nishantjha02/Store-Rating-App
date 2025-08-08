@@ -72,8 +72,9 @@ Before you begin, ensure you have the following installed:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd store-rating-system
+git clone https://github.com/Nishantjha02/Store-Rating-App.git
+cd Store-Rating-App
+
 ```
 
 ### Step 2: Database Setup
