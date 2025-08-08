@@ -2,6 +2,8 @@
 
 A full-stack web application for managing stores and customer ratings with role-based access control. Built with React, Node.js/Express, and MySQL.
 
+# Screenshots
+Login Page <img width="1157" height="887" alt="Screenshot 2025-08-09 004721" src="https://github.com/user-attachments/assets/14126fb3-e187-4aea-8498-6116d9e8f17a" />
 
 ## 🌟 Features
 
